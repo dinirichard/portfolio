@@ -1,0 +1,126 @@
+<nav class="navbar is-transparent is-planner">
+    <div class="container">
+        <a class="navbar-item" href="/">
+            <img heigth="52" alt="Idem Daniel | Engineer, Back-end Developer" src="assets\d-letter-image.png" />
+        </a>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <p class="buttons">
+                        <a class="button is-medium" onclick="document.getElementById('form').reset();"
+                            data-tooltip="Reset">
+                            <span class="icon ">
+                                <mat-icon color="primary" aria-hidden="false" aria-label="Example home icon">refresh
+                                </mat-icon>
+                            </span>
+                        </a>
+                        <a class="button is-medium " onclick="document.getElementById('form').reset();"
+                            data-tooltip="Reset">
+                            <span class="icon ">
+                                <mat-icon color="primary" aria-hidden="false" aria-label="Example home icon">close
+                                </mat-icon>
+                            </span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</nav>
+<div class="line"></div>
+<div class="is-form-page">
+
+    <section class="is-white has-text-centered">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-three-quarters is-centered ">
+                    <img class="avatar has-text-centered" src="assets\wanhedar.png">
+
+                    <h1 class="title is-spaced is-size-2-tablet is-size-3-mobile has-text-centered">
+                        Thanks for taking the time to reach out.
+                        How can I help you today?
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="is-white">
+        <div class="container">
+            <form id="form" method="POST" accept-charset="UTF-8" name="form" #f="ngForm"
+                (ngSubmit)="f.form.valid && sendFeedback()" novalidate class="feedback-form">
+                <div class="columns is-centered">
+                    <div class="column is-half">
+                        <div class="field">
+                            <label class="label">Name</label>
+                            <div class="control is-expanded">
+                                <input name="name" class="input is-large form-control" type="text" id="name" name="name"
+                                    [(ngModel)]="model.name" #name="ngModel"
+                                    [ngClass]="{ 'is-invalid': f.submitted && name.invalid }" required>
+                            </div>
+                            <!-- input validation group -->
+                            <div *ngIf="f.submitted && name.invalid" class="invalid-input">
+                                <!-- individual validation errors -->
+                                <!-- <div *ngIf="name.errors?.required">Field is required</div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-half">
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control is-expanded">
+                                <input name="email" class="input is-large form-control" type="text" id="email"
+                                    name="email" [(ngModel)]="model.email" #email="ngModel"
+                                    [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email>
+                            </div>
+                            <!-- input validation group -->
+                            <div *ngIf="f.submitted && email.invalid" class="invalid-input">
+                                <!-- individual validation errors -->
+                                <!-- <div *ngIf="email.errors?.required">Field is required</div>
+                  <div *ngIf="email.errors?.email">Field is not a valid email</div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control is-expanded">
+                                <textarea name="message" class="textarea is-large form-control" id="feedback" rows="5"
+                                    [(ngModel)]="model.message" #feedback="ngModel"
+                                    [ngClass]="{ 'is-invalid': f.submitted && feedback.invalid }" required
+                                    minlength=""></textarea>
+                            </div>
+
+                            <!-- input validation group -->
+
+                            <div *ngIf="f.submitted && feedback.invalid" class="invalid-input">
+                                <!-- individual validation errors -->
+                                <!-- <div *ngIf="feedback.errors?.required">Field is required</div>
+                  <div *ngIf="feedback.errors?.minlength"> -->
+                                Field is too small (try 10 characters)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+                <div class="columns is-centered">
+                    <div class="column is-one-third">
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-primary is-outlined is-medium is-fullwidth is-rounded"
+                                    type="submit">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+</div>
