@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "dev": "(cd ../ && npm run start:dev ) & npm run start",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

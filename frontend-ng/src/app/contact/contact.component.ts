@@ -20,6 +20,7 @@ export class ContactComponent implements OnInit {
   }
 
   sendFeedback(): void {
+    console.log('clicked');
     this.apiPortService.postContact(this.model).subscribe(
       response => {
         location.reload();

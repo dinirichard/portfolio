@@ -8,6 +8,7 @@ export class AppService {
   constructor(private readonly mailerService: MailerService) { }
 
   public makeContact(contactModel: ContactDTO): void {
+    console.log('services');
     this
       .mailerService
       .sendMail({
@@ -17,8 +18,9 @@ export class AppService {
         text: contactModel.message, // plaintext body
         html: `<b>Hello frm ${contactModel.name} </b>`, // HTML body content
       })
-      .then(() => { })
-      .catch(() => { });
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   getHello(): string {

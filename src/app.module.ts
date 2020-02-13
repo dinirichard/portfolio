@@ -6,7 +6,14 @@ import { HandlebarsAdapter, MailerModule } from '@nest-modules/mailer';
 @Module({
   imports: [
     MailerModule.forRoot({
-      transport: 'smtps://1c11a790179b7f@mailtrap.io:41dc7294031bed@smtp.mailtrap.io',
+      transport: {
+        host: 'smtp.mailtrap.io',
+        port: 2525,
+        auth: {
+          user: '1c11a790179b7f',
+          pass: '41dc7294031bed',
+        },
+      },
       defaults: {
         from: '"nest-modules" <modules@nestjs.com>',
       },
