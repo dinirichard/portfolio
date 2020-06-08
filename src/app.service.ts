@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 import { MailerService } from '@nest-modules/mailer';
 import { ContactDTO } from './models/contact.dto';
 
@@ -8,7 +8,6 @@ export class AppService {
   constructor(private readonly mailerService: MailerService) { }
 
   public makeContact(contactModel: ContactDTO): void {
-    console.log('services');
     this
       .mailerService
       .sendMail({
@@ -16,10 +15,11 @@ export class AppService {
         from: contactModel.email, // sender address
         subject: 'Contact from DanielIdem.com', // Subject line
         text: contactModel.message, // plaintext body
-        html: `<b>Hello frm ${contactModel.name} </b>`, // HTML body content
+        html: `<b>Hello from ${contactModel.name} </b>`, // HTML body content
       })
       .catch((err) => {
         console.log(err);
+        throw new HttpException('Mail not working', HttpStatus.INTERNAL_SERVER_ERROR);
       });
   }
 
