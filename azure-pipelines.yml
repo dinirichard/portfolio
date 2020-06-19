@@ -48,6 +48,7 @@ steps:
   displayName: 'install angular and deploy
 
 - task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: drop'
   inputs:
     PathtoPublish: '$(System.DefaultWorkingDirectory)/'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
