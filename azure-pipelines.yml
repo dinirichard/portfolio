@@ -17,11 +17,11 @@ steps:
 
 - script: |
     npm install -g @nestjs/cli
+    npm install -g azure-functions-core-tools@3
     npm install
     npm run build
     npm prune --production
     func azure functionapp publish danielidem-api
-    ng deploy
   displayName: 'install nestjs and deploy'
 
 - script: |
