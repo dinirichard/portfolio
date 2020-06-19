@@ -21,6 +21,13 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- task: AzureFunctionApp@1 # Add this at the end of your file
+  inputs:
+    azureSubscription: service-connection
+    appType: functionAppLinux
+    appName: $(appName)
+    package: $(System.ArtifactsDirectory)/**/*.zip
+
 - script: |
     npm install -g @nestjs/cli
     npm install -g azure-functions-core-tools@3
@@ -29,13 +36,6 @@ steps:
     npm prune --production
     func azure functionapp publish danielidem-api
   displayName: 'install nestjs and deploy'
-
-- task: AzureFunctionApp@1 # Add this at the end of your file
-  inputs:
-    azureSubscription: service-connection
-    appType: functionAppLinux
-    appName: $(appName)
-    package: $(System.ArtifactsDirectory)/**/*.zip
 
 - script: |
     cd frontend-ng/
