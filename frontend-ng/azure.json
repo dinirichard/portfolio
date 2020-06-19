@@ -1,0 +1,17 @@
+{
+  "hosting": [
+    {
+      "app": {
+        "project": "frontend-ng",
+        "target": "build",
+        "configuration": "production",
+        "path": "dist/frontend-ng"
+      },
+      "azureHosting": {
+        "subscription": "cb89e0ef-6d83-4caf-928e-3804db1d9613",
+        "resourceGroupName": "danielidem",
+        "account": "danielidem"
+      }
+    }
+  ]
+}
