@@ -16,6 +16,16 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    npm install -g @nestjs/cli
+    npm install
+    npm run build
+    npm prune --production
+    func azure functionapp publish danielidem-api
+    ng deploy
+  displayName: 'install nestjs and deploy'
+
+- script: |
+    cd frontend-ng/
     npm install -g @angular/cli
     npm install
     export CI=1
@@ -24,4 +34,4 @@ steps:
     export TENANT_ID='8cf3c4eb-960a-4ae9-8093-e276fd7a2351'
     export AZURE_SUBSCRIPTION_ID="cb89e0ef-6d83-4caf-928e-3804db1d9613"
     ng deploy
-  displayName: 'npm install and build'
+  displayName: 'install angular and deploy'
