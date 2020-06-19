@@ -49,6 +49,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'C:\agent\_work\r1\a\_Portfolio2'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    PathtoPublish: C:\agent\_work\r1\a\_Portfolio2
+    ArtifactName: drop
+    publishLocation: Container
