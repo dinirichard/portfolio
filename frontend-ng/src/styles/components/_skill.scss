@@ -1,0 +1,66 @@
+.skill {
+    height: 3.5rem;
+    width: 95%;
+    position: relative;
+    display: flex;
+    margin-bottom: 2rem;
+    // padding: 0.4rem 0rem;
+    font-size: $font-size-default;
+    color: $color-primary-dark;
+
+	// .skill__name
+	&__name {
+        display: inline-block;
+        width: 11rem;
+        height: 100%;
+        background-color: $color-secondary-light;
+        font-size: $font-size-default;
+        color: findColorInvert($color-secondary-light);
+        padding: 0.4rem 0rem;
+
+    }
+    
+	// .skill__bar
+	&__bar {
+        display: inline-block;
+        height: 100%;
+        background-color: rgb(194, 193, 193);
+        width: 90%;
+        border-radius: 0rem 3rem 3rem 0rem;
+    }
+    
+	// .skill__view
+	&__fill {
+        z-index: 5;
+        background-color: $color-secondary-dark;
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        animation: progressBar 1s ease-in;
+        // transition: width 5s ease;
+
+    //     &::before {
+    //     // transform: translateX(20);
+    //     content: '';
+    //     z-index: 5;
+    //     background-color: $color-secondary-dark;
+    //     height: 100%;
+    //     display: inline-block;
+    //     animation: progressBar 5s ease-in;
+    // }
+
+        &-div {
+            height: 100%;
+            display: inline-block;
+        }
+    }
+
+    
+    
+    &__num {
+        display: inline-block;
+        align-self: flex-end;
+        padding: 0.4rem 0.3rem 0.4rem 0;
+        // position: absolute;
+    }
+}

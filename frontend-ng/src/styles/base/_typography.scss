@@ -1,0 +1,126 @@
+.heading-primary {
+    color: $color-primary-dark;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 700;
+        color: $color-primary-dark;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+
+        // animation-name: moveInLeft;
+        // animation-duration: 1s;
+        // animation-timing-function: ease-out;
+
+
+        /* animation-delay: 1s; */
+        /* animation-iteration-count: 3; */
+
+        @include respond(phone) {
+            letter-spacing: 0.5rem;
+            // font-family: ;
+        }
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+
+        animation: moveInRight 1s ease-out;
+    }
+}
+
+.heading-secondary {
+    font-size: 4rem;
+    // text-transform: capitalize;
+    font-weight: 500;
+    // display: inline-block;
+    color: $color-primary-dark;
+    // -webkit-background-clip: text;
+    letter-spacing: 2px;
+    // transition: all 0.2s;
+
+    &--red{
+        color: $color-tertiary-dark;
+    }
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+        // font-family: ;
+    }
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+        // font-family: ;
+    }
+
+    // &:hover {
+    //     transform: skewY(2deg) skewX(15deg) scale(1.1);
+    //     text-shadow: 0.5rem 1rem 2rem black 0.2;
+    // }
+}
+
+.heading-secondary--mini {
+    font-size: 3rem;
+    // text-transform: uppercase;
+    font-weight: 500;
+    // display: inline-block;
+    // background: linear-gradient(
+    //     to right,
+    //     $color-primary-light,
+    //     $color-primary-dark
+    // );
+    // -webkit-background-clip: text;
+    color: $color-primary;
+    letter-spacing: 2px;
+    // transition: all 0.2s;
+
+    // &:hover {
+    //     transform: skewY(2deg) skewX(15deg) scale(1.1);
+    //     text-shadow: 0.5rem 1rem 2rem black 0.2;
+    // }
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 400;
+    // text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: $color-black;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+
+.topic {
+    display: block;
+    max-width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__head {
+        animation: moveInLeft 0.4s;
+    }
+
+    &__underline {
+        height: 1rem;
+        width: 8rem;
+        background-color: $color-primary-dark;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        // animation: moveInLeft 0.4s;
+    }
+}

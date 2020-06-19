@@ -1,0 +1,53 @@
+.project {
+
+      &--note {
+            width: 100%;
+            background-color: #FFC107;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+      }
+		// .project__box
+
+	&__box {
+            height: 49.5rem;
+            width: 60%;
+            background-size: cover;
+            border-radius: 4rem;
+            &--note {
+                  background-image: url(../assets/NoteIt.png);
+            }
+
+            &--ideas {
+                  background-image: url(../assets/NoteIt.png);
+            }
+	}
+
+		// .project__img
+
+	&__img {
+            position: absolute;
+            background-size: cover;
+            
+      }
+            
+      &__text {
+            &--title {
+                  color: white; 
+                  line-height: 2rem;
+            }
+
+            &--subtitle {
+                  color: white; 
+            }
+
+            &--desc {
+                  color: white; 
+                  width: 50%;
+                  @include respond(phone) {
+                        width: 80%;
+                  }
+            }
+      }
+}

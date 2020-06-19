@@ -1,0 +1,75 @@
+@keyframes progressBar {
+0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    // opacity: 0;
+    transform: translate(-50rem);
+  }
+
+//   80% {
+//     transform: translate(1rem);
+//   }
+
+  100% {
+    // opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    // opacity: 0;
+    transform: translate(50rem);
+  }
+
+//   80% {
+//     transform: translate(-1rem);
+//   }
+
+  100% {
+    // opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.25);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  75% {
+    transform: scale(1.75);
+  }
+
+  100% {
+    transform: scale(2);
+  }
+}

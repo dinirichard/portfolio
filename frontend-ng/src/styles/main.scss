@@ -6,11 +6,23 @@
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
 
-// @import 'base/animations';
+@import 'base/animations';
 @import 'base/base';
 @import 'base/typography';
 @import 'base/utilities';
 
-// @import 'components/popup';
+@import 'components/about';
+@import 'components/button';
+@import 'components/form';
+@import 'components/project';
+@import 'components/skill';
+@import 'components/work';
 
+@import 'layout/grid';
 @import 'layout/navigation';
+
+@import 'pages/home';
+
+
+//* STYLES in angular.json
+//  "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",

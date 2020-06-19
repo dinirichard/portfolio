@@ -1,3 +1,254 @@
-<header class="nav-bar">
-    
-</header>
+<div class="navigation">
+    <div class="navigation__shape">
+        <img src="../../assets/MyAvatar_face.png" alt="Home" class="navigation__img">
+    </div>
+
+    <div class="navigation__nav">
+        <ul class="navigation__list">
+            <li class="navigation__item">
+                <a href="#about" class="navigation__link">About</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">Work</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">Contact</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="section-intro">
+    <div class="hero-body">
+        <div class="container u-center-text u-margin-top-big">
+            <h1 class="heading-secondary">
+                Hello, I'm <span class="heading-secondary--red">Daniel Idem</span>.<br>
+                I'm a full-stack developer.
+            </h1>
+        </div>
+    </div>
+    <div class="container intro">
+        <img src="../../assets/heroxxxhdpi.png" alt="" class="intro__img  u-margin-top-small">
+    </div>
+    <!-- <div class="section-line"></div> -->
+</div>
+
+<div class="section-about" id="about">
+    <div class="topic u-center-text u-margin-top-medium u-margin-bottom-big">
+        <h1 class="topic__head heading-primary--main">
+            About
+        </h1>
+        <div class="topic__underline"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-1-of-2">
+            <div class="about__left">
+                <div class="about__hexagon">
+                    <img src="../../assets/MyAvatar_pose_prt.png" alt="Home" class="about__img">
+                </div>
+                <h2 class="u-center-text heading-secondary--mini u-margin-top-small">
+                    Who am I?
+                </h2>
+
+                <h3 class="u-center-text heading-tertiary">
+                    I'm a full-stack developer with foundations in Java 
+                    and typescript, I have a serious passion for back-end 
+                    development, with increasing mastery of front-end design, 
+                    animations and dynamic user experience.
+                </h3>
+
+            </div>
+        </div>
+        <div class="col-1-of-2">
+            <div class="about__right">
+                <div class="skill" *ngFor="let skill of skills">
+                    <div class="skill__name has-text-centered">{{ skill.skill }}</div>
+                    <div class="skill__bar">
+                        <!-- [ngStyle]="{'width':skill.amount}" -->
+                        <div class="skill__fill-div" [ngStyle]="{'width':skill.amount}">
+                            <span class="skill__fill" ></span>
+                        </div>
+                        
+                        <div class="skill__num is-pulled-right">
+                            {{ skill.amount }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="section-line"></div>
+</div>
+
+<div class="section-work" id="work">
+    <div class="topic u-center-text u-margin-top-medium u-margin-bottom-big">
+        <h1 class="topic__head heading-primary--main">
+            Work
+        </h1>
+        <div class="topic__underline"></div>
+    </div>
+
+    <div class="work">
+        <div class="work__circle u-margin-bottom-medium">
+            <img src="../../assets/MyAvatar_pose_sqr_2.png" alt="work" class="work__img">
+        </div>
+
+        <div class="work__intro u-margin-bottom-big">
+            <h2 class="u-center-text heading-secondary--mini u-margin-top-small">
+                What I've been up to.
+            </h2>
+
+            <h3 class="u-center-text heading-tertiary">
+                Here's a selection of some recent work. For more up to 
+                the minute work you can visit me on github or linked-in.
+            </h3>
+        </div>
+
+        <div class="work__project--note ">
+            <div class="project__box project__box--note u-margin-bottom-medium" (click)="toNoteIt()">
+                <!-- <img src="../../assets/NoteIt.png" alt="Note-It" class="project__img"> -->
+            </div>
+
+            <h2 class="project__text--title u-center-text heading-secondary--mini u-margin-top-small u-margin-bottom-small" (click)="toNoteIt()">
+                NoteIt pwa-app<br/>
+                <span class="project__text--subtitle subtitle is-4">Angular / IndexedDB</span>
+            </h2>
+
+            <h3 class="project__text--desc u-center-text heading-tertiary">
+                This progresive web application which saves notes and is capable 
+                of being operational offline as its data is stored in the browser session.
+            </h3>
+        </div>
+
+        <div class="work__project--ideas ">
+            <div class="project__box project__box--ideas u-margin-bottom-medium">
+                <!-- <img src="../../assets/NoteIt.png" alt="Note-It" class="project__img"> -->
+            </div>
+
+            <h2 class="project__text--title u-center-text heading-secondary--mini u-margin-top-small u-margin-bottom-small">
+                NoteIt pwa-app<br/>
+                <span class="project__text--subtitle subtitle is-4">Angular / IndexedDB</span>
+            </h2>
+
+            <h3 class="project__text--desc u-center-text heading-tertiary">
+                This progresive web application which saves notes and is capable 
+                of being operational offline as its data is stored in the browser session.
+            </h3>
+        </div>
+
+        <div class="work__outro u-margin-bottom-big u-margin-top-medium">
+            <h2 class="u-center-text heading-secondary">
+                I can help.
+            </h2>
+            <h2 class="work__outro--subtitle u-center-text heading-secondary--mini">
+                I'm currently available for freelance work.
+            </h2>
+
+            <h3 class="work__outro--desc u-center-text heading-tertiary">
+                If you have a project that you want to get started, think you 
+                need my help with something or just fancy saying hey, then get in touch.
+            </h3>
+        </div>
+
+    </div>
+    <div class="section-line"></div>
+</div>
+
+<div class="section-contact" id="contact">
+    <div class="topic u-center-text u-margin-top-medium u-margin-bottom-big">
+        <h1 class="topic__head heading-primary--main">
+            Contact
+        </h1>
+        <div class="topic__underline"></div>
+    </div>
+
+    <div class="contact">
+        <form
+        class="form u-margin-bottom-big" 
+        [formGroup]="model"
+        >
+            <div class="form__group">
+                <div class="form__group--col">
+                    <label for="name" class="form__label heading-tertiary">
+                        Name
+                    </label>
+                    <input
+                        type="text"
+                        class="form__input"
+                        placeholder="Full Name"
+                        formControlName="name"
+                        id="name"
+                        required
+                    />
+                </div>
+
+                <div class="form__group--col">
+                    <label for="email" class="form__label heading-tertiary">
+                        Email
+                    </label>
+                    <input
+                        type="text"
+                        class="form__input"
+                        placeholder="Email"
+                        formControlName="email"
+                        id="email"
+                        required
+                    />
+                    
+                </div>
+            </div>
+            <div class="form__group">
+                <!-- <div class="form__group--col"> -->
+                    <label for="desc" class="form__label heading-tertiary">
+                            Additional details
+                        </label>
+                    <textarea
+                            type="text"
+                            class="form__textarea"
+                            rows="6"
+                            placeholder="Full Name"
+                            formControlName="message"
+                            id="desc"
+                            required
+                    >
+                    </textarea>
+                <!-- </div> -->
+                    
+            </div>
+            <div class="form__group">
+                <div class="form__btn">
+                    <a class="btn heading-tertiary" (click)="sendFeedback()">Submit</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer class="footer hero">
+  <div class="hero-foot">
+    <div class="columns is-mobile is-centered">
+        <div class="column is-half has-text-centered">
+            <div class="footer__icons">
+                <a href="https://www.linkedin.com/in/daniel-idem/" target="_blank">
+                    <div class="footer__icons--icon" id="icon-2">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </a>
+                <a href="https://github.com/dinirichard" target="_blank">
+                    <div class="footer__icons--icon" id="icon-5">
+                        <i class="fab fa-github"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="footer__footnote heading-tertiary u-margin-top-small">
+                <h3>Daniel Idem
+                    <span class="footer__footnote--red">@ 2020</span>
+                </h3>
+            </div>
+        </div>
+    </div>
+  </div>
+</footer>

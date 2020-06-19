@@ -1,0 +1,80 @@
+.navigation {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e0ebe7;
+
+    &__shape {
+        width: 8rem;
+        height: 8rem;
+        background-color: $color-white;
+
+        // make cirle-like margin
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+
+        // make circle
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+
+        // transform: translateX(-3rem) skewX(12deg);
+        position: relative;
+
+        // to hide edges
+        overflow: hidden;
+    }
+
+    &__img {
+        height: 100%;
+    }
+
+	// .navigation__nav
+	&__nav {
+    }
+    
+	// .navigation__list
+	&__list {
+        list-style: none;
+        text-align: center;
+    }
+    
+	// .navigation__item
+	&__item {
+        display: inline-block;
+        margin: 0rem 2rem;
+    }
+    
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 1.7rem;
+            font-weight: 400;
+            color: $color-primary;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary-dark;
+        }
+	}
+}
+
+.intro{
+    position: relative;
+
+    &__img {
+        width: 60%;
+        max-width: 860px;
+        display:block;
+        // @include absCenter;
+        // position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, 0%);
+    }
+}

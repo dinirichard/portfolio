@@ -1,0 +1,96 @@
+.work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+	// .work__circle
+	&__circle {
+        display: block;
+        height: 15.5rem;
+        width: 15.5rem;
+        background: rgb(181, 181, 181);
+        position: relative;
+        clip-path: circle(50% at 50% 50%);
+        transition: all 0.6s ease-in;
+
+        &::before {
+            content: '';
+            height: 15rem;
+            width: 15rem;
+            background: $color-white;
+            position: absolute;
+            clip-path: circle(50% at 50% 50%);
+            top: 0.25rem;
+            left: 0.25rem;
+        }
+    }
+
+    &__circle:hover {
+        // transition: zoomIn 0.6s ease-in;
+        transform: scale(2);
+        background: $color-white;
+        // clip-path: polygon(0 0, 100% 0%, 60% 100%, 41% 100%);
+
+        &::before {
+            height: 15.5rem;
+            width: 15.5rem;
+            top: 0rem;
+            left: 0rem;
+            // clip-path: polygon(0 0, 100% 0%, 60% 100%, 41% 100%);
+        }
+    }
+    
+	// .work__img
+	&__img {
+        height: 100%;
+        @include absCenter();
+    }
+    
+    &__intro {
+        width: 30%;
+        max-width: 40%;
+        @include respond(tab-port) {
+            max-width: 80%;
+        }
+    }
+
+    &__outro {
+        width: 50%;
+        max-width: 50%;
+        @include respond(tab-port) {
+            max-width: 80%;
+        }
+
+        &--desc {
+            padding: 0rem 14rem;
+            @include respond(tab-port) {
+                padding: 0;
+            }
+        }
+
+        &--subtitle {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__project {
+
+        &--note {
+            width: 100%;
+            background-color: #FFC107;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8rem 0rem;
+        }
+        
+        &--ideas {
+            width: 100%;
+            background-color: #83149A;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8rem 0rem;
+        }
+    }
+}

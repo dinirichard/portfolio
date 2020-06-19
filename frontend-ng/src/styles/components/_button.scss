@@ -1,0 +1,20 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        text-decoration: none;
+        text-transform: capitalize;
+        border: 2px solid $color-primary-dark;
+        padding: 1rem 3rem;
+        background-color: $color-white;
+        color: $color-primary-dark;
+        border-radius: 3rem;
+    }
+
+    &:hover {
+        border-color: $color-primary;
+        background-color: $color-primary;
+        color: findColorInvert($color-primary);
+    }
+}
