@@ -54,6 +54,4 @@ steps:
     export TENANT_ID='8cf3c4eb-960a-4ae9-8093-e276fd7a2351'
     export AZURE_SUBSCRIPTION_ID="cb89e0ef-6d83-4caf-928e-3804db1d9613"
     ng deploy
-  displayName: 'install angular and deploy
-
-
+  displayName: 'install angular and deploy'
