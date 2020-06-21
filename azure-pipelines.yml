@@ -9,7 +9,7 @@ trigger:
 
 variables:
   # Azure service connection established during pipeline creation
-  azureSubscription: pay-as-you-go
+  azureSubscription: service-connection-rm
   appName: danielidem-api
 
 pool:
@@ -26,6 +26,15 @@ steps:
 #     azureSubscription: service-connection-rm
 #     appType: functionAppLinux
 #     appName: $(appName)
+
+## Add the below snippet at the end of your pipeline
+- task: AzureWebApp@1
+  displayName: 'Azure Web App Deploy'
+  inputs:
+    azureSubscription: $(azureSubscription)
+    appType: webAppLinux
+    appName: $(appName)
+    package: $(System.ArtifactsDirectory)/**/*.zip
 
 - script: |
     npm install -g @nestjs/cli
@@ -47,8 +56,4 @@ steps:
     ng deploy
   displayName: 'install angular and deploy
 
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: 'C:\agent\_work\r1\a\_Portfolio2'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+
