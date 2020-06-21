@@ -53,3 +53,12 @@ steps:
     export AZURE_SUBSCRIPTION_ID="cb89e0ef-6d83-4caf-928e-3804db1d9613"
     ng deploy
   displayName: 'install angular and deploy'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: $(azureSubscription)
+    appType: 'webAppLinux'
+    WebAppName: $(appName)
+    Package: '$(Build.ArtifactStagingDirectory)/dist/'
+    StartupCommand: 'npm run start:prod'
