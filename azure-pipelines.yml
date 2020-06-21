@@ -71,7 +71,8 @@ jobs:
         appName: $(appName)
 
 - job: myStep
-  steps: ${{ parameters.frontend }}
+  steps: 
+    - ${{ parameters.frontend }}
 
 # steps:
 # - task: NodeTool@0
