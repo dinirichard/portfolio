@@ -28,13 +28,11 @@ steps:
 #     appName: $(appName)
 
 ## Add the below snippet at the end of your pipeline
-- task: AzureWebApp@1
-  displayName: 'Azure Web App Deploy'
+- task: PublishBuildArtifacts@1
   inputs:
-    azureSubscription: $(azureSubscription)
-    appType: webAppLinux
-    appName: $(appName)
-    package: '$(Build.ArtifactStagingDirectory)/dist/'
+    PathtoPublish: '$(build.artifactstagingdirectory)/'
+    ArtifactName: 'drop'
+    # publishLocation: 'Container'
 
 - script: |
     npm install -g @nestjs/cli
