@@ -34,7 +34,7 @@ steps:
     azureSubscription: $(azureSubscription)
     appType: webAppLinux
     appName: $(appName)
-    package: $(System.ArtifactsDirectory)/**/*.zip
+    package: '$(Build.ArtifactStagingDirectory)/dist/'
 
 - script: |
     npm install -g @nestjs/cli
