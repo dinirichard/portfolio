@@ -32,7 +32,7 @@ parameters:
   default:
     script: |
       cd frontend-ng/
-      npm install -g @angular/cli
+      sudo npm install -g @angular/cli
       npm install
       export CI=1
       export CLIENT_ID='4028c136-fdda-4f91-8629-a86c47108a77'
