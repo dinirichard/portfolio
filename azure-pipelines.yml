@@ -64,11 +64,13 @@ jobs:
         PathtoPublish: '$(build.artifactstagingdirectory)/'
         ArtifactName: 'drop'
         # publishLocation: 'Container'
-    - task: AzureFunctionApp@1 # Add this at the end of your file
+# Add this at the end of your file
+    - task: AzureFunctionApp@1 
       inputs:
-        azureSubscription: service-connection-rm
+        azureSubscription: $(azureSubscription)
         appType: functionAppLinux
         appName: $(appName)
+        package: '$(build.artifactstagingdirectory)/**/*.zip'
 
 - job: myStep
   steps: 
