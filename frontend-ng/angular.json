@@ -29,14 +29,17 @@
             ],
             "styles": [
               "src/styles/main.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/animate.css/animate.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
                 "src/styles"
               ]
             },
-            "scripts": []
+            "scripts": [
+              "./node_modules/wow.js/dist/wow.js"
+            ]
           },
           "configurations": {
             "production": {

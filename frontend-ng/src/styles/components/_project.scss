@@ -15,12 +15,13 @@
             width: 60%;
             background-size: cover;
             border-radius: 4rem;
+            cursor: pointer;
             &--note {
-                  background-image: url(../assets/NoteIt.png);
+                  background-image: url(../../assets/NoteIt.png);
             }
 
             &--ideas {
-                  background-image: url(../assets/NoteIt.png);
+                  background-image: url(../../assets/NoteIt.png);
             }
 	}
 
@@ -36,6 +37,7 @@
             &--title {
                   color: white; 
                   line-height: 2rem;
+                  cursor: pointer;
             }
 
             &--subtitle {

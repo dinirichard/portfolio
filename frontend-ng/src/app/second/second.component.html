@@ -9,10 +9,10 @@
                 <a href="#about" class="navigation__link">About</a>
             </li>
             <li class="navigation__item">
-                <a href="#" class="navigation__link">Work</a>
+                <a href="#work" class="navigation__link">Work</a>
             </li>
             <li class="navigation__item">
-                <a href="#" class="navigation__link">Contact</a>
+                <a href="#contact" class="navigation__link">Contact</a>
             </li>
         </ul>
     </div>
@@ -20,7 +20,7 @@
 
 <div class="section-intro">
     <div class="hero-body">
-        <div class="container u-center-text u-margin-top-big">
+        <div class="container u-center-text u-margin-top-big u-margin-bottom-big">
             <h1 class="heading-secondary">
                 Hello, I'm <span class="heading-secondary--red">Daniel Idem</span>.<br>
                 I'm a full-stack developer.
@@ -34,16 +34,16 @@
 </div>
 
 <div class="section-about" id="about">
-    <div class="topic u-center-text u-margin-top-medium u-margin-bottom-big">
+    <div class="wow topic u-center-text u-margin-top-medium u-margin-bottom-big">
         <h1 class="topic__head heading-primary--main">
             About
         </h1>
-        <div class="topic__underline"></div>
+        <div class="wow topic__underline"></div>
     </div>
 
     <div class="row">
         <div class="col-1-of-2">
-            <div class="about__left">
+            <div class="wow about__left">
                 <div class="about__hexagon">
                     <img src="../../assets/MyAvatar_pose_prt.png" alt="Home" class="about__img">
                 </div>
@@ -61,13 +61,13 @@
             </div>
         </div>
         <div class="col-1-of-2">
-            <div class="about__right">
+            <div class="wow about__right">
                 <div class="skill" *ngFor="let skill of skills">
                     <div class="skill__name has-text-centered">{{ skill.skill }}</div>
                     <div class="skill__bar">
                         <!-- [ngStyle]="{'width':skill.amount}" -->
                         <div class="skill__fill-div" [ngStyle]="{'width':skill.amount}">
-                            <span class="skill__fill" ></span>
+                            <span class="wow skill__fill" @ProgressBarFill #skillz></span>
                         </div>
                         
                         <div class="skill__num is-pulled-right">
@@ -79,6 +79,7 @@
             
         </div>
     </div>
+    
     <div class="section-line"></div>
 </div>
 
@@ -91,8 +92,8 @@
     </div>
 
     <div class="work">
-        <div class="work__circle u-margin-bottom-medium">
-            <img src="../../assets/MyAvatar_pose_sqr_2.png" alt="work" class="work__img">
+        <div class="work__circle bounce pulse u-margin-bottom-medium">
+            <img src="../../assets/MyAvatar_pose_sqr_2.png" alt="work" class="bounce work__img">
         </div>
 
         <div class="work__intro u-margin-bottom-big">

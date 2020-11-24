@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SecondComponent } from './second/second.component';
+import { NgwWowModule } from 'ngx-wow';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { SecondComponent } from './second/second.component';
     HttpClientModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgwWowModule
   ],
   providers: [],
   bootstrap: [AppComponent]
